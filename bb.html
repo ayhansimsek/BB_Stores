@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DataTables Cell Copy Example</title>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<style>
+.copyBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: #069;
+    cursor: pointer;
+    text-align: center;
+}
+.odd, .even {text-align: left;}
+.copyBtn:hover {
+    text-decoration: underline;
+}
+.dataTables_wrapper .dataTables_filter {
+    float: left;
+    text-align: left;
+}
+.dataTables_info, .dataTables_paginate, .paging_simple_numbers{display:none;
+}
+</style>
+</head>
+<body>
+<h1>BABYBUNTING STORES</h1>
+<h2>Click & Copy</h2>
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Store Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Location</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td>Sylvia Park</td><td>09 414 2310</td><td>Lifestyle Centre, 393 Mt Wellington Highway, Auckland, New Zealand</td><td>New Zealand</td>
+        <tr><td>2</td><td>Helensvale</td><td>07 5580 0144</td><td>Shop 1, 1 Pacific Highway, Helensvale, QLD</td><td>Queensland</td>
+        <tr><td>3</td><td>Townsville</td><td>07 4430 8400</td><td>Shop 2C, 103 Duckworth Street, Townsville, QLD</td><td>Queensland</td>
+        <tr><td>4</td><td>Christchurch</td><td>03 353 2680</td><td>Tower Junction, 9/66 Clarence Street, Christchurch, New Zealand</td><td>New Zealand</td>
+        <tr><td>5</td><td>Albany</td><td>09 414 2244</td><td>Albany Lifestyle Centre, Tenancy 10, 7 Corban Avenue, Auckland, New Zealand</td><td>New Zealand</td>
+        <tr><td>6</td><td>Manukau</td><td>09 414 2300</td><td>Manukau Supa Centre, 3/55 Lambie Drive, Auckland, New Zealand</td><td>New Zealand</td>
+        <tr><td>7</td><td>Glenorchy</td><td>(03) 6273 8341</td><td>Tenancy 1, 10 Derwent Park Road, Derwent Park, TAS</td><td>Tasmania</td>
+        <tr><td>8</td><td>Orange</td><td>(02) 6360 9600</td><td>21/5295 Mitchell Highway, Orange, NSW</td><td>New South Wales</td>
+        <tr><td>9</td><td>Wagga Wagga</td><td>02 6933 9600</td><td>204-208 Baylis St, Wagga Wagga, NSW</td><td>New South Wales</td>
+        <tr><td>10</td><td>Moore Park</td><td>02 9662 4263</td><td>Shop LG02, Cnr Todman Av &amp; South Dowling Street, Kensington, NSW</td><td>New South Wales</td>
+        <tr><td>11</td><td>Albury</td><td>02 6021 0333</td><td>94 Borella Road East, Albury, NSW</td><td>New South Wales</td>
+        <tr><td>12</td><td>Auburn</td><td>02 9648 5660</td><td>241 Parramatta Road, Auburn, NSW</td><td>New South Wales</td>
+        <tr><td>13</td><td>Penrith</td><td>02 4726 7600</td><td>Shop 350, At Home Penrith, 13 Patty Place, Penrith, NSW</td><td>New South Wales</td>
+        <tr><td>14</td><td>Taren Point</td><td>02 9525 4055</td><td>9/120 Taren Point Road, Taren Point, NSW</td><td>New South Wales</td>
+        <tr><td>15</td><td>West Gosford</td><td>02 4322 1000</td><td>Shop 5, Riverside Park, 376 Manns Road, West Gosford, NSW</td><td>New South Wales</td>
+        <tr><td>16</td><td>Campbelltown</td><td>02 4620 5222</td><td>Shop 5, 5 Blaxland Service Way, Campbelltown, NSW</td><td>New South Wales</td>
+        <tr><td>17</td><td>Belrose</td><td>02 9450 0277</td><td>Shop 101-102, Lower Ground 4-6 Niangala Close, Belrose, NSW</td><td>New South Wales</td>
+        <tr><td>18</td><td>Warners Bay</td><td>02 4954 0322</td><td>Shop 1, 335 Hillsborough Road, Warners Bay, NSW</td><td>New South Wales</td>
+        <tr><td>19</td><td>Blacktown</td><td>02 8814 9044</td><td>Blacktown Mega Centre, Corner Blacktown Road &amp; St Martins Crescent, Blacktown, NSW</td><td>New South Wales</td>
+        <tr><td>20</td><td>Rutherford</td><td>02 4932 7144</td><td>343 New England Hwy, Rutherford, NSW</td><td>New South Wales</td>
+        <tr><td>21</td><td>Chatswood</td><td>02 8422 7600</td><td>Shop 9, 372 Eastern Valley Hwy, Chatswood, NSW</td><td>New South Wales</td>
+        <tr><td>22</td><td>Geelong</td><td>(03) 5241 8530</td><td>Homemaker Centre, 235-237 Colac Road, Waurn Ponds, VIC</td><td>Victoria</td>
+        <!-- Add more rows as needed -->
+    </tbody>
+</table>
+
+<script>
+$(document).ready(function() {
+    $('#example').DataTable({
+        "createdRow": function(row, data, dataIndex) {
+            $('td', row).each(function(index, td) {
+                if(index < $('thead th').length) {
+                    var cellText = $(td).text(); // Get cell text
+                    $(td).html('<button class="copyBtn" data-text="'+ cellText +'">' + cellText + '</button>'); // Replace cell text with a button
+                }
+            });
+        },
+        "drawCallback": function () {
+            $('.copyBtn').off('click').on('click', function (e) {
+                e.stopPropagation(); // Prevent table row click event if any
+                var text = $(this).attr('data-text'); // Get the data-text attribute value
+                navigator.clipboard.writeText(text); // Copy text to clipboard
+                // Alert removed as per request
+            });
+        },
+        "pageLength": -1, // Show all rows
+        "lengthChange": false // Disable the ability to change the number of rows shown
+    });
+});
+
+</script>
+
+</body>
+<!--for excel combine text   =Concatenate(<tr><td>A2</td><td>B2</td><td>C2</td><td>D2</td><td>E2</td>)   -->>
+</html>

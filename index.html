@@ -2,6 +2,9 @@
 <html>
 <head>
 <title>BabyBunting Stores</title>
+<link rel="icon" href="https://www.babybunting.com.au//favicon-16x16.png" type="image/x-icon"/>
+
+
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -25,7 +28,11 @@
     float: left;
     text-align: left;
 }
-.dataTables_info, .dataTables_paginate, .paging_simple_numbers{display:none;
+.dataTables_info, .dataTables_paginate, .paging_simple_numbers{display:none;}
+.call_link{
+   display: flow;
+   text-align: center;
+   text-decoration: none; 
 }
 </style>
 </head>
@@ -38,87 +45,89 @@
             <th>No</th>
             <th>Store Name</th>
             <th>Phone</th>
+            <th>Call via Teams</th>
             <th>Address</th>
             <th>Location</th>
-            
         </tr>
     </thead>
     <tbody>
-        <tr><td>-1</td><td>Hawthorn</td><td>03 8809 5200</td><td>693 Burwood Road Hawthorn East, VIC</td><td>AUNZ</td></tr>
-<tr><td>-2</td><td>Maribyrnong</td><td>03 9318 7444</td><td>6 / 98-108 Hampstead Road Maidstone, VIC</td><td>AUNZ</td></tr>
-<tr><td>-3</td><td>Preston</td><td>03 9495 1386</td><td>Shop 5, 86 Bell Street Preston, VIC</td><td>AUNZ</td></tr>
-<tr><td>-4</td><td>Chadstone</td><td>03 9563 4022</td><td>Shop M002, Chadstone Shopping Centre, 1341 Dandenong Road Chadstone, VIC</td><td>AUNZ</td></tr>
-<tr><td>-5</td><td>Doncaster</td><td>03 9840 2122</td><td>Shop MM101/2 Westfield Doncaster, 619 Doncaster Road Doncaster, VIC</td><td>AUNZ</td></tr>
-<tr><td>-6</td><td>Thomastown</td><td>03 9465 7770</td><td>1 / 36 Dalton Rd Thomastown, VIC</td><td>AUNZ</td></tr>
-<tr><td>-7</td><td>Bentleigh</td><td>03 9575 4444</td><td>669 Warrigal Road Bentleigh, VIC</td><td>AUNZ</td></tr>
-<tr><td>-8</td><td>Burnside</td><td>03 8361 1444</td><td>T3, Cnr Ballarat Road & Chisholm Drive</td><td>AUNZ</td></tr>
-<tr><td>-9</td><td>Taylors Lakes</td><td>03 7378 7500</td><td>Shop 4, 460 Melton Highway Taylors Lakes, VIC</td><td>AUNZ</td></tr>
-<tr><td>-10</td><td>Hoppers Crossing</td><td>03 8360 7090</td><td>302-306 Old Geelong Road Hoppers Crossing, VIC</td><td>AUNZ</td></tr>
-<tr><td>-11</td><td>Ringwood Eastland</td><td>03 8847 5900</td><td>MM20, Level 1, Eastland Shopping Centre, 171-175 Maroondah Hwy, Ringwood, VIC</td><td>AUNZ</td></tr>
-<tr><td>-12</td><td>Knox</td><td>03 9259 1600</td><td>Shop M002, Level 2, Shop 2104A Westfield Shopping Centre 425 Burwood Highway Wantirna South VIC</td><td>AUNZ</td></tr>
-<tr><td>-13</td><td>Chirnside Park</td><td>03 9294 4700</td><td>Tenancy 4, 266-268 Maroondah Hwy</td><td>AUNZ</td></tr>
-<tr><td>-14</td><td>Narre Warren</td><td>03 9704 1444</td><td>430 Princes Hwy, Corner of Princes Hwy & Narre Warren North Road Narre Warren, VIC</td><td>AUNZ</td></tr>
-<tr><td>-15</td><td>Frankston</td><td>03 9769 6597</td><td>Shop 1, Power Centre, 85-115 Cranborne-Frankston Road Frankston, VIC</td><td>AUNZ</td></tr>
-<tr><td>-16</td><td>Baby Bunting Cranbourne</td><td>03 5990 0700</td><td>Shop 28, Cranbourne Home, 1280 Thompsons Road</td><td>AUNZ</td></tr>
-<tr><td>-17</td><td>Geelong</td><td>03 5241 8530</td><td>Geelong Homemaker Centre, 235-237 Colac Road Waurn Ponds, VIC</td><td>AUNZ</td></tr>
-<tr><td>-18</td><td>Ballarat</td><td>03 5338 1777</td><td>333 Gillies Street North, Wendouree Home Wendouree, VIC</td><td>AUNZ</td></tr>
-<tr><td>-19</td><td>Bendigo</td><td>03 5447 3544</td><td>Shop 13a, Rocklea Homemaker Centre, 239-249 High Street Kangaroo Flat, VIC</td><td>AUNZ</td></tr>
-<tr><td>-20</td><td>Shepparton</td><td>03 5829 7500</td><td>Shop 22, 8025 Goulburn Valley Hwy, Riverside Plaza Kialla, VIC</td><td>AUNZ</td></tr>
-<tr><td>-21</td><td>Albury</td><td>02 6021 0333</td><td>94 Borella Road East Albury, NSW</td><td>AUNZ</td></tr>
-<tr><td>-22</td><td>Wagga Wagga</td><td>02 6933 9600</td><td>204-208 Baylis St, Wagga Wagga, NSW</td><td>AUNZ</td></tr>
-<tr><td>-23</td><td>Belconnen</td><td>02 6252 1000</td><td>Shop 186, Level 3, Westfield Belconnen Shopping Centre Belconnen ACT</td><td>AUNZ</td></tr>
-<tr><td>-24</td><td>Fyshwick</td><td>02 6280 7299</td><td>Shop 1, 30 Iron Knob Street, Fyshwick, ACT</td><td>AUNZ</td></tr>
-<tr><td>-25</td><td>Glenorchy</td><td>03 6273 8341</td><td>Tenancy 1, 10 Derwent Park Road Derwent Park, TAS</td><td>AUNZ</td></tr>
-<tr><td>-26</td><td>Baby Bunting Orange</td><td>02 6360 9600</td><td>21/5295 Mitchell Highway, Orange, NSW, 2800</td><td>AUNZ</td></tr>
-<tr><td>-27</td><td>Shellharbour</td><td>02 4295 1500</td><td>Shop 18, Shellharbour Park, 5 Range Road, Shellharbour City Centre NSW</td><td>AUNZ</td></tr>
-<tr><td>-28</td><td>Hectorville</td><td>08 8154 8900</td><td>46 Glynburn Road</td><td>AUNZ</td></tr>
-<tr><td>-29</td><td>Melrose Park</td><td>08 8177 0905</td><td>Melrose Plaza, 1031-1037 South Road, Melrose Park, SA</td><td>AUNZ</td></tr>
-<tr><td>-30</td><td>Mile End</td><td>08 8234 0633</td><td>Shop 10, 340 South Road, Richmond, SA</td><td>AUNZ</td></tr>
-<tr><td>-31</td><td>Gepps Cross</td><td>08 8162 9985</td><td>Shop 10, 750 Main North Road, Gepps Cross, SA</td><td>AUNZ</td></tr>
-<tr><td>-32</td><td>Munno Para</td><td>08 8254 6222</td><td>600 Main N Road Smithfield, SA</td><td>AUNZ</td></tr>
-<tr><td>-33</td><td>Campbelltown</td><td>02 4620 5222</td><td>Shop 5, 5 Blaxland Service Way Campbelltown, NSW</td><td>AUNZ</td></tr>
-<tr><td>-34</td><td>Penrith</td><td>02 4726 7600</td><td>Shop 350, At Home Penrith, 13 Patty Place Penrith, NSW</td><td>AUNZ</td></tr>
-<tr><td>-35</td><td>Casula</td><td>02 8795 8800</td><td>Shop 21, Crossroads Homemaker Centre. Corner Beeches Road & Parkers Farm Place Casula. NSW</td><td>AUNZ</td></tr>
-<tr><td>-36</td><td>Wetherill Park</td><td>02 8777 6100</td><td>Unit 48-51, Greenway Wetherill Park, 1183-1187 The Horsley Drive, Wetherill Park, NSW</td><td>AUNZ</td></tr>
-<tr><td>-37</td><td>Bankstown</td><td>02 9783 8222</td><td>Shop 15A, Bankstown Home, 9-49 Chapel Road Bankstown NSW</td><td>AUNZ</td></tr>
-<tr><td>-38</td><td>Taren Point</td><td>02 9525 4055</td><td>9/120 Taren Point Road Taren Point, NSW</td><td>AUNZ</td></tr>
-<tr><td>-39</td><td>Blacktown</td><td>02 8814 9044</td><td>Blacktown Mega Centre Corner Blacktown Road & St Martins Crescent Blacktown, NSW</td><td>AUNZ</td></tr>
-<tr><td>-40</td><td>Auburn</td><td>02 9648 5660</td><td>241 Parramatta Road Auburn, NSW</td><td>AUNZ</td></tr>
-<tr><td>-41</td><td>Alexandria</td><td>02 8303 8200</td><td>Shop C, 494-504 Gardeners Rd (Cnr O'riordan St) Alexandria, NSW</td><td>AUNZ</td></tr>
-<tr><td>-42</td><td>Castle Towers</td><td>02 8891 0700</td><td>Shop 378, Level 2 Castle Towers Shopping Centre 6-14 Castle Hill, Castle Hill, NSW</td><td>AUNZ</td></tr>
-<tr><td>-43</td><td>Moore Park</td><td>02 9662 4263</td><td>Shop LG02 Cnr Todman Av & South Dowling Street Kensington, NSW</td><td>AUNZ</td></tr>
-<tr><td>-44</td><td>Hornsby</td><td>02 9472 2500</td><td>Shop MM3, Level 2 Westfield Hornsby Shopping Centre, 236 Pacific Highway</td><td>AUNZ</td></tr>
-<tr><td>-45</td><td>Chatswood</td><td>02 8422 7600</td><td>Shop 9, 372 Eastern Valley Hwy Chatswood, NSW</td><td>AUNZ</td></tr>
-<tr><td>-46</td><td>Belrose</td><td>02 9450 0277</td><td>Shop 101-102, Lower Ground 4-6 Niangala Close Belrose, NSW</td><td>AUNZ</td></tr>
-<tr><td>-47</td><td>West Gosford</td><td>02 4322 1000</td><td>Shop 5, Riverside Park, 376 Manns Road West Gosford, NSW</td><td>AUNZ</td></tr>
-<tr><td>-48</td><td>Warners Bay</td><td>02 4954 0322</td><td>Shop 1, 335 Hillsborough Road Warners Bay, NSW</td><td>AUNZ</td></tr>
-<tr><td>-49</td><td>Rutherford</td><td>02 4932 7144</td><td>343 New England Hwy Rutherford, NSW</td><td>AUNZ</td></tr>
-<tr><td>-50</td><td>Coffs Harbour</td><td>02 6690 1500</td><td>Shop M002, Shop 20, Park Beach Home Base 252 Pacific Highway Coffs Harbour NSW</td><td>AUNZ</td></tr>
-<tr><td>-51</td><td>Toowoomba</td><td>07 4687 3200</td><td>Shop 2, Building A 910-932 Ruthven Rd Toowoomba, QLD</td><td>AUNZ</td></tr>
-<tr><td>-52</td><td>Burleigh Waters</td><td>07 5520 5633</td><td>Shop 15, Burleigh Homespace, 1 Santa Maria Court Burleigh Waters, QLD</td><td>AUNZ</td></tr>
-<tr><td>-53</td><td>Booval</td><td>07 3282 0900</td><td>Shop 5A, 214 Brisbane Road Booval, QLD</td><td>AUNZ</td></tr>
-<tr><td>-54</td><td>Helensvale</td><td>07 5580 0144</td><td>Shop 1, 1 Pacific Highway Helensvale, QLD</td><td>AUNZ</td></tr>
-<tr><td>-55</td><td>Browns Plains</td><td>07 3800 3022</td><td>Shop J1 Browns Plains Homemaker Centre 18 Commerce Drive Browns Plains QLD</td><td>AUNZ</td></tr>
-<tr><td>-56</td><td>Loganholme</td><td>07 3442 9000</td><td>Tenancy 6B/C, Hyperdome Home Centre, 3786-3810 Pacific Highway</td><td>AUNZ</td></tr>
-<tr><td>-57</td><td>Macgregor</td><td>07 3349 2655</td><td>Shop 1, 532 Kessels Road Macgregor, QLD</td><td>AUNZ</td></tr>
-<tr><td>-58</td><td>Fortitude Valley</td><td>07 3853 9900</td><td>Shop 18A, 650 Wickham Street, Homemaker The Valley North Fortitude Valley, QLD</td><td>AUNZ</td></tr>
-<tr><td>-59</td><td>Capalaba</td><td>07 3245 7900</td><td>Shop 1, 75 Redland Bay Road Capalaba, QLD</td><td>AUNZ</td></tr>
-<tr><td>-60</td><td>Aspley</td><td>07 3263 3200</td><td>Shop 5-6 825 Zillmere Rd, Aspley, QLD</td><td>AUNZ</td></tr>
-<tr><td>-61</td><td>North Lakes</td><td>07 3491 8200</td><td>Shop 6, 111 North Lakes Drive North Lakes, QLD</td><td>AUNZ</td></tr>
-<tr><td>-62</td><td>Sunshine Coast Kawana</td><td>07 5437 7600</td><td>Shop 6C, Home Central Sunshine Coast Kawana, QLD</td><td>AUNZ</td></tr>
-<tr><td>-63</td><td>Townsville</td><td>07 4430 8400</td><td>Shop 2C, 103 Duckworth Street Townsville, QLD</td><td>AUNZ</td></tr>
-<tr><td>-64</td><td>Cairns</td><td>07 4047 4600</td><td>37-47 Florence Street</td><td>AUNZ</td></tr>
-<tr><td>-65</td><td>Christchurch</td><td>03 353 2680</td><td>Tower Junction, 9/66 Clarence Street</td><td>AUNZ</td></tr>
-<tr><td>-66</td><td>Albany</td><td>09 414 2244</td><td>Albany Lifestyle Centre, Tenancy 10, 7 Corban Avenue</td><td>AUNZ</td></tr>
-<tr><td>-67</td><td>Sylvia Park</td><td>09 414 2310</td><td>Sylvia Park Lifestyle Centre, 393 Mt Wellington Highway</td><td>AUNZ</td></tr>
-<tr><td>-68</td><td>Manukau</td><td>09 414 2300</td><td>Manukau Supa Centre, 3/55 Lambie Drive</td><td>AUNZ</td></tr>
-<tr><td>-69</td><td>Baldivis</td><td>08 9591 8800</td><td>Shop 8, 600 Baldivis Road, Baldivis, WA</td><td>AUNZ</td></tr>
-<tr><td>-70</td><td>Midland</td><td>08 9250 5755</td><td>Shop 14, Midland Central, 4 Clayton Street Midland, WA</td><td>AUNZ</td></tr>
-<tr><td>-71</td><td>Cannington</td><td>08 9258 4100</td><td>1419 Albany Hwy  Cannington, WA</td><td>AUNZ</td></tr>
-<tr><td>-72</td><td>Myaree</td><td>08 9330 3111</td><td>Shop 3, 248 Leach Highway, Myaree, WA</td><td>AUNZ</td></tr>
-<tr><td>-73</td><td>Osborne Park</td><td>08 9278 0300</td><td>Shop 4, 505 Scarborough Road, Osborne Park, WA</td><td>AUNZ</td></tr>
-<tr><td>-74</td><td>Joondalup</td><td>08 9300 0927</td><td>Shop 5, Masters Home Improvement Centre, 11 Injune Way Joondalup, WA</td><td>AUNZ</td></tr>
-        <!-- Add more rows as needed -->
+        <!-- add +64 for NZ-->
+        
+<tr><td>001</td><td>Hawthorn</td><td>0388095200</td><td><a href='tel:0388095200' class='call_link'> Call &#128222; </a></td><td>693 Burwood Road Hawthorn East, VIC</td><td>VIC</td></tr>
+<tr><td>002</td><td>Ringwood Eastland</td><td>0388475900</td><td><a href='tel:0388475900' class='call_link'> Call &#128222; </a></td><td>MM20, Level 1, Eastland Shopping Centre, 171-175 Maroondah Hwy, Ringwood, VIC</td><td>VIC</td></tr>
+<tr><td>003</td><td>Bentleigh</td><td>0395754444</td><td><a href='tel:0395754444' class='call_link'> Call &#128222; </a></td><td>669 Warrigal Road Bentleigh, VIC</td><td>VIC</td></tr>
+<tr><td>004</td><td>Maribyrnong</td><td>0393187444</td><td><a href='tel:0393187444' class='call_link'> Call &#128222; </a></td><td>6 / 98-108 Hampstead Road Maidstone, VIC</td><td>VIC</td></tr>
+<tr><td>005</td><td>Narre Warren</td><td>0397041444</td><td><a href='tel:0397041444' class='call_link'> Call &#128222; </a></td><td>430 Princes Hwy, Corner of Princes Hwy & Narre Warren North Road Narre Warren, VIC</td><td>VIC</td></tr>
+<tr><td>006</td><td>Thomastown</td><td>0394657770</td><td><a href='tel:0394657770' class='call_link'> Call &#128222; </a></td><td>1 / 36 Dalton Rd Thomastown, VIC</td><td>VIC</td></tr>
+<tr><td>007</td><td>Frankston</td><td>0397696597</td><td><a href='tel:0397696597' class='call_link'> Call &#128222; </a></td><td>Shop 1, Power Centre, 85-115 Cranborne-Frankston Road Frankston, VIC</td><td>VIC</td></tr>
+<tr><td>008</td><td>Melrose Park</td><td>0881770905</td><td><a href='tel:0881770905' class='call_link'> Call &#128222; </a></td><td>Melrose Plaza, 1031-1037 South Road, Melrose Park, SA</td><td>SA</td></tr>
+<tr><td>009</td><td>Gepps Cross</td><td>0881629985</td><td><a href='tel:0881629985' class='call_link'> Call &#128222; </a></td><td>Shop 10, 750 Main North Road, Gepps Cross, SA</td><td>SA</td></tr>
+<tr><td>010</td><td>Moore Park</td><td>0296624263</td><td><a href='tel:0296624263' class='call_link'> Call &#128222; </a></td><td>Shop LG02 Cnr Todman Av & South Dowling Street Kensington, NSW</td><td>NSW</td></tr>
+<tr><td>011</td><td>Geelong</td><td>0352418530</td><td><a href='tel:0352418530' class='call_link'> Call &#128222; </a></td><td>Geelong Homemaker Centre, 235-237 Colac Road Waurn Ponds, VIC</td><td>VIC</td></tr>
+<tr><td>012</td><td>Hoppers Crossing</td><td>0383607090</td><td><a href='tel:0383607090' class='call_link'> Call &#128222; </a></td><td>302-306 Old Geelong Road Hoppers Crossing, VIC</td><td>VIC</td></tr>
+<tr><td>013</td><td>Auburn</td><td>0296485660</td><td><a href='tel:0296485660' class='call_link'> Call &#128222; </a></td><td>241 Parramatta Road Auburn, NSW</td><td>NSW</td></tr>
+<tr><td>014</td><td>Fyshwick</td><td>0262807299</td><td><a href='tel:0262807299' class='call_link'> Call &#128222; </a></td><td>Shop 1, 30 Iron Knob Street, Fyshwick, ACT</td><td>ACT</td></tr>
+<tr><td>016</td><td>Penrith</td><td>0247267600</td><td><a href='tel:0247267600' class='call_link'> Call &#128222; </a></td><td>Shop 350, At Home Penrith, 13 Patty Place Penrith, NSW</td><td>NSW</td></tr>
+<tr><td>017</td><td>Helensvale</td><td>0755800144</td><td><a href='tel:0755800144' class='call_link'> Call &#128222; </a></td><td>Shop 1, 1 Pacific Highway Helensvale, QLD</td><td>QLD</td></tr>
+<tr><td>018</td><td>Myaree</td><td>0893303111</td><td><a href='tel:0893303111' class='call_link'> Call &#128222; </a></td><td>Shop 3, 248 Leach Highway, Myaree, WA</td><td>WA</td></tr>
+<tr><td>019</td><td>Cannington</td><td>0892584100</td><td><a href='tel:0892584100' class='call_link'> Call &#128222; </a></td><td>1419 Albany Hwy Cannington, WA</td><td>WA</td></tr>
+<tr><td>020</td><td>Kawana</td><td>0754377600</td><td><a href='tel:0754377600' class='call_link'> Call &#128222; </a></td><td>Shop 6C, Home Central Sunshine Coast Kawana, QLD</td><td>QLD</td></tr>
+<tr><td>021</td><td>Fortitude Valley</td><td>0738539900</td><td><a href='tel:0738539900' class='call_link'> Call &#128222; </a></td><td>Shop 18A, 650 Wickham Street, Homemaker The Valley North Fortitude Valley, QLD</td><td>QLD</td></tr>
+<tr><td>022</td><td>Warners Bay</td><td>0249540322</td><td><a href='tel:0249540322' class='call_link'> Call &#128222; </a></td><td>Shop 1, 335 Hillsborough Road Warners Bay, NSW</td><td>NSW</td></tr>
+<tr><td>023</td><td>Taren Point</td><td>0295254055</td><td><a href='tel:0295254055' class='call_link'> Call &#128222; </a></td><td>9/120 Taren Point Road Taren Point, NSW</td><td>NSW</td></tr>
+<tr><td>024</td><td>Joondalup</td><td>0893000927</td><td><a href='tel:0893000927' class='call_link'> Call &#128222; </a></td><td>Shop 5, Masters Home Improvement Centre, 11 Injune Way Joondalup, WA</td><td>WA</td></tr>
+<tr><td>025</td><td>Midland</td><td>0892505755</td><td><a href='tel:0892505755' class='call_link'> Call &#128222; </a></td><td>Shop 14, Midland Central, 4 Clayton Street Midland, WA</td><td>WA</td></tr>
+<tr><td>026</td><td>Osborne Park</td><td>0892780300</td><td><a href='tel:0892780300' class='call_link'> Call &#128222; </a></td><td>Shop 4, 505 Scarborough Road, Osborne Park, WA</td><td>WA</td></tr>
+<tr><td>027</td><td>Townsville</td><td>0744308400</td><td><a href='tel:0744308400' class='call_link'> Call &#128222; </a></td><td>Shop 2C, 103 Duckworth Street Townsville, QLD</td><td>QLD</td></tr>
+<tr><td>028</td><td>Taylors Lakes</td><td>0373787500</td><td><a href='tel:0373787500' class='call_link'> Call &#128222; </a></td><td>Shop 4, 460 Melton Highway Taylors Lakes, VIC</td><td>VIC</td></tr>
+<tr><td>029</td><td>Macgregor</td><td>0733492655</td><td><a href='tel:0733492655' class='call_link'> Call &#128222; </a></td><td>Shop 1, 532 Kessels Road Macgregor, QLD</td><td>QLD</td></tr>
+<tr><td>030</td><td>Ballarat</td><td>0353381777</td><td><a href='tel:0353381777' class='call_link'> Call &#128222; </a></td><td>333 Gillies Street North, Wendouree Home Wendouree, VIC</td><td>VIC</td></tr>
+<tr><td>031</td><td>West Gosford</td><td>0243221000</td><td><a href='tel:0243221000' class='call_link'> Call &#128222; </a></td><td>Shop 5, Riverside Park, 376 Manns Road West Gosford, NSW</td><td>NSW</td></tr>
+<tr><td>032</td><td>Bendigo</td><td>0354473544</td><td><a href='tel:0354473544' class='call_link'> Call &#128222; </a></td><td>Shop 13a, Rocklea Homemaker Centre, 239-249 High Street Kangaroo Flat, VIC</td><td>VIC</td></tr>
+<tr><td>033</td><td>Booval</td><td>0732820900</td><td><a href='tel:0732820900' class='call_link'> Call &#128222; </a></td><td>Shop 5A, 214 Brisbane Road Booval, QLD</td><td>QLD</td></tr>
+<tr><td>034</td><td>North Lakes</td><td>0734918200</td><td><a href='tel:0734918200' class='call_link'> Call &#128222; </a></td><td>Shop 6, 111 North Lakes Drive North Lakes, QLD</td><td>QLD</td></tr>
+<tr><td>035</td><td>Burleigh Waters</td><td>0755205633</td><td><a href='tel:0755205633' class='call_link'> Call &#128222; </a></td><td>Shop 15, Burleigh Homespace, 1 Santa Maria Court Burleigh Waters, QLD</td><td>QLD</td></tr>
+<tr><td>036</td><td>Campbelltown</td><td>0246205222</td><td><a href='tel:0246205222' class='call_link'> Call &#128222; </a></td><td>Shop 5, 5 Blaxland Service Way Campbelltown, NSW</td><td>NSW</td></tr>
+<tr><td>037</td><td>Capalaba</td><td>0732457900</td><td><a href='tel:0732457900' class='call_link'> Call &#128222; </a></td><td>Shop 1, 75 Redland Bay Road Capalaba, QLD</td><td>QLD</td></tr>
+<tr><td>038</td><td>Preston</td><td>0394951386</td><td><a href='tel:0394951386' class='call_link'> Call &#128222; </a></td><td>Shop 5, 86 Bell Street Preston, VIC</td><td>VIC</td></tr>
+<tr><td>040</td><td>Baldivis</td><td>0895918800</td><td><a href='tel:0895918800' class='call_link'> Call &#128222; </a></td><td>Shop 8, 600 Baldivis Road, Baldivis, WA</td><td>WA</td></tr>
+<tr><td>041</td><td>Belrose</td><td>0294500277</td><td><a href='tel:0294500277' class='call_link'> Call &#128222; </a></td><td>Shop 101-102, Lower Ground 4-6 Niangala Close Belrose, NSW</td><td>NSW</td></tr>
+<tr><td>042</td><td>Mile End</td><td>0882340633</td><td><a href='tel:0882340633' class='call_link'> Call &#128222; </a></td><td>Shop 10, 340 South Road, Richmond, SA</td><td>SA</td></tr>
+<tr><td>043</td><td>Blacktown</td><td>0288149044</td><td><a href='tel:0288149044' class='call_link'> Call &#128222; </a></td><td>Blacktown Mega Centre Corner Blacktown Road & St Martins Crescent Blacktown, NSW</td><td>NSW</td></tr>
+<tr><td>044</td><td>Munno Para</td><td>0882546222</td><td><a href='tel:0882546222' class='call_link'> Call &#128222; </a></td><td>600 Main N Road Smithfield, SA</td><td>SA</td></tr>
+<tr><td>045</td><td>Albury</td><td>0260210333</td><td><a href='tel:0260210333' class='call_link'> Call &#128222; </a></td><td>94 Borella Road East Albury, NSW</td><td>NSW</td></tr>
+<tr><td>046</td><td>Aspley</td><td>0732633200</td><td><a href='tel:0732633200' class='call_link'> Call &#128222; </a></td><td>Shop 5-6 825 Zillmere Rd, Aspley, QLD</td><td>QLD</td></tr>
+<tr><td>047</td><td>Rutherford</td><td>0249327144</td><td><a href='tel:0249327144' class='call_link'> Call &#128222; </a></td><td>343 New England Hwy Rutherford, NSW</td><td>NSW</td></tr>
+<tr><td>048</td><td>Browns Plains</td><td>0738003022</td><td><a href='tel:0738003022' class='call_link'> Call &#128222; </a></td><td>Shop J1 Browns Plains Homemaker Centre 18 Commerce Drive Browns Plains QLD</td><td>QLD</td></tr>
+<tr><td>049</td><td>Toowoomba</td><td>0746873200</td><td><a href='tel:0746873200' class='call_link'> Call &#128222; </a></td><td>Shop 2, Building A 910-932 Ruthven Rd Toowoomba, QLD</td><td>QLD</td></tr>
+<tr><td>050</td><td>Chatswood</td><td>0284227600</td><td><a href='tel:0284227600' class='call_link'> Call &#128222; </a></td><td>Shop 9, 372 Eastern Valley Hwy Chatswood, NSW</td><td>NSW</td></tr>
+<tr><td>051</td><td>Glenorchy</td><td>0362738341</td><td><a href='tel:0362738341' class='call_link'> Call &#128222; </a></td><td>Tenancy 1, 10 Derwent Park Road Derwent Park, TAS</td><td>TAS</td></tr>
+<tr><td>052</td><td>Bankstown</td><td>0297838222</td><td><a href='tel:0297838222' class='call_link'> Call &#128222; </a></td><td>Shop 15A, Bankstown Home, 9-49 Chapel Road Bankstown NSW</td><td>NSW</td></tr>
+<tr><td>053</td><td>Chadstone</td><td>0395634022</td><td><a href='tel:0395634022' class='call_link'> Call &#128222; </a></td><td>Shop M002, Chadstone Shopping Centre, 1341 Dandenong Road Chadstone, VIC</td><td>VIC</td></tr>
+<tr><td>054</td><td>Shellharbour</td><td>0242951500</td><td><a href='tel:0242951500' class='call_link'> Call &#128222; </a></td><td>Shop 18, Shellharbour Park, 5 Range Road, Shellharbour City Centre NSW</td><td>NSW</td></tr>
+<tr><td>055</td><td>Doncaster</td><td>0398402122</td><td><a href='tel:0398402122' class='call_link'> Call &#128222; </a></td><td>Shop MM101/2 Westfield Doncaster, 619 Doncaster Road Doncaster, VIC</td><td>VIC</td></tr>
+<tr><td>056</td><td>Wetherill Park</td><td>0287776100</td><td><a href='tel:0287776100' class='call_link'> Call &#128222; </a></td><td>Unit 48-51, Greenway Wetherill Park, 1183-1187 The Horsley Drive, Wetherill Park, NSW</td><td>NSW</td></tr>
+<tr><td>057</td><td>Casula</td><td>0287958800</td><td><a href='tel:0287958800' class='call_link'> Call &#128222; </a></td><td>Shop 21, Crossroads Homemaker Centre. Corner Beeches Road & Parkers Farm Place Casula. NSW</td><td>NSW</td></tr>
+<tr><td>058</td><td>Knox</td><td>0392591600</td><td><a href='tel:0392591600' class='call_link'> Call &#128222; </a></td><td>Shop M002, Level 2, Shop 2104A Westfield Shopping Centre 425 Burwood Highway Wantirna South VIC</td><td>VIC</td></tr>
+<tr><td>059</td><td>Castle Towers</td><td>0288910700</td><td><a href='tel:0288910700' class='call_link'> Call &#128222; </a></td><td>Shop 378, Level 2 Castle Towers Shopping Centre 6-14 Castle Hill, Castle Hill, NSW</td><td>NSW</td></tr>
+<tr><td>060</td><td>Coffs Harbour</td><td>0266901500</td><td><a href='tel:0266901500' class='call_link'> Call &#128222; </a></td><td>Shop M002, Shop 20, Park Beach Home Base 252 Pacific Highway Coffs Harbour NSW</td><td>NSW</td></tr>
+<tr><td>061</td><td>Belconnen</td><td>0262521000</td><td><a href='tel:0262521000' class='call_link'> Call &#128222; </a></td><td>Shop 186, Level 3, Westfield Belconnen Shopping Centre Belconnen ACT</td><td>ACT</td></tr>
+<tr><td>062</td><td>Alexandria</td><td>0283038200</td><td><a href='tel:0283038200' class='call_link'> Call &#128222; </a></td><td>Shop C, 494-504 Gardeners Rd (Cnr O'riordan St) Alexandria, NSW</td><td>NSW</td></tr>
+<tr><td>063</td><td>Wagga Wagga</td><td>0269339600</td><td><a href='tel:0269339600' class='call_link'> Call &#128222; </a></td><td>204-208 Baylis St, Wagga Wagga, NSW</td><td>NSW</td></tr>
+<tr><td>064</td><td>Cairns</td><td>0740474600</td><td><a href='tel:0740474600' class='call_link'> Call &#128222; </a></td><td>37-47 Florence Street, Parramatta Park QLD</td><td>QLD</td></tr>
+<tr><td>066</td><td>Burnside</td><td>0383611444</td><td><a href='tel:0383611444' class='call_link'> Call &#128222; </a></td><td>T3, Cnr Ballarat Road & Chisholm Drive, Burnside VIC</td><td>VIC</td></tr>
+<tr><td>067</td><td>Hornsby</td><td>0294722500</td><td><a href='tel:0294722500' class='call_link'> Call &#128222; </a></td><td>Shop MM3, Level 2 Westfield Hornsby Shopping Centre, 236 Pacific Highway, Hornsby NSW</td><td>NSW</td></tr>
+<tr><td>068</td><td>Hectorville</td><td>0881548900</td><td><a href='tel:0881548900' class='call_link'> Call &#128222; </a></td><td>46 Glynburn Road, Hectorville SA</td><td>SA</td></tr>
+<tr><td>069</td><td>Chirnside Park</td><td>0392944700</td><td><a href='tel:0392944700' class='call_link'> Call &#128222; </a></td><td>Tenancy 4, 266-268 Maroondah Hwy, Chirnside Park VIC</td><td>VIC</td></tr>
+<tr><td>070</td><td>Loganholme</td><td>0734429000</td><td><a href='tel:0734429000' class='call_link'> Call &#128222; </a></td><td>Tenancy 6B/C, Hyperdome Home Centre, 3786-3810 Pacific Highway,Loganholme QLD</td><td>QLD</td></tr>
+<tr><td>071</td><td>Orange</td><td>0263609600</td><td><a href='tel:0263609600' class='call_link'> Call &#128222; </a></td><td>21/5295 Mitchell Highway, Orange, NSW, 2800</td><td>NSW</td></tr>
+<tr><td>072</td><td>Cranbourne</td><td>0359900700</td><td><a href='tel:0359900700' class='call_link'> Call &#128222; </a></td><td>Shop 28, Cranbourne Home, 1280 Thompsons Road, Cranbourne VIC 3977</td><td>VIC</td></tr>
+<tr><td>301</td><td>Albany</td><td>+6494142244</td><td><a href='tel:+6494142244' class='call_link'> Call &#128222; </a></td><td>Albany Lifestyle Centre, Tenancy 10, 7 Corban Avenue, Auckland 0632</td><td>NZ</td></tr>
+<tr><td>302</td><td>Christchurch</td><td>+6433532680</td><td><a href='tel:+6433532680' class='call_link'> Call &#128222; </a></td><td>Tower Junction, 9/66 Clarence Street, Addington, Christchurch 8011, New Zealand</td><td>NZ</td></tr>
+<tr><td>303</td><td>Sylvia Park</td><td>+6494142310</td><td><a href='tel:+6494142310' class='call_link'> Call &#128222; </a></td><td>Sylvia Park Lifestyle Centre, 393 Mt Wellington Highway</td><td>NZ</td></tr>
+<tr><td>304</td><td>Manukau</td><td>+6494142300</td><td><a href='tel:+6494142300' class='call_link'> Call &#128222; </a></td><td>Manukau Supa Centre, 3/55 Lambie Drive, Auckland 2104</td><td>NZ</td></tr>
+
+
     </tbody>
 </table>
 
@@ -127,18 +136,18 @@ $(document).ready(function() {
     $('#example').DataTable({
         "createdRow": function(row, data, dataIndex) {
             $('td', row).each(function(index, td) {
-                if(index < $('thead th').length) {
-                    var cellText = $(td).text(); // Get cell text
-                    $(td).html('<button class="copyBtn" data-text="'+ cellText +'">' + cellText + '</button>'); // Replace cell text with a button
+                if (index !== 3) { // Exclude the Teams Call column from button functionality
+                    var cellText = $(td).text();
+                    $(td).html('<button class="copyBtn" data-text="'+ cellText +'">' + cellText + '</button>');
                 }
             });
         },
         "drawCallback": function () {
             $('.copyBtn').off('click').on('click', function (e) {
-                e.stopPropagation(); // Prevent table row click event if any
-                var text = $(this).attr('data-text'); // Get the data-text attribute value
-                navigator.clipboard.writeText(text); // Copy text to clipboard
-                // Alert removed as per request
+                e.stopPropagation(); // Prevent table row click event
+                var text = $(this).attr('data-text');
+                navigator.clipboard.writeText(text);
+                // Alert removed for simplicity
             });
         },
         "pageLength": -1, // Show all rows
@@ -149,5 +158,4 @@ $(document).ready(function() {
 </script>
 
 </body>
-<!--for excel combine text   =Concatenate(<tr><td>A2</td><td>B2</td><td>C2</td><td>D2</td><td>E2</td>)   -->>
 </html>

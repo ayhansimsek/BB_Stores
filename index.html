@@ -4,7 +4,6 @@
 <title>BabyBunting Stores</title>
 <link rel="icon" href="https://www.babybunting.com.au//favicon-16x16.png" type="image/x-icon"/>
 
-
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -34,11 +33,157 @@
    text-align: center;
    text-decoration: none; 
 }
+.print_form {
+  border: 2px solid #a74b3b8e; 
+  padding: 20px; 
+  margin: 20px 0; 
+  float: right; /* Makes the item align to the right */
+  width: 50%; /* Sets the item's width to occupy 50% of its parent container */
+}
+
+
+/* Style the DataTables search box */
+.dataTables_filter input {
+    width: 300px; /* Extend the width of the search area */
+    padding: 10px; /* Add more padding for better aesthetics */
+    margin-right: 10px; /* Add some margin to the right */
+    border: 1px solid #ccc; /* Add a border to the search input */
+    border-radius: 4px; /* Add rounded corners */
+    font-size: 16px; /* Increase font size for better readability */
+}
+
+/* Optionally, style the DataTables search label for consistency */
+.dataTables_filter label {
+    font-size: 16px; /* Match font size with the input */
+    color: #333; /* Change the text color if needed */
+    padding-left: 10px; /* Add some padding to the left for spacing */
+}
+</style>
+
+<style>
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printArea, #printArea * {
+    visibility: visible;
+  }
+  #printArea {
+    position: absolute;
+    left: 5%;
+    top: 2%;
+  }
+}
 </style>
 </head>
+
+
+
 <body>
-<h1>BABYBUNTING STORES</h1>
-<h2>Click & Copy</h2>
+<h1>BB STORES // Click & Copy</h1>
+
+
+<form class="print_form" id="storeForm">
+    <h3>Sending Items to stores</h3>
+    <label for="senderName">Sender Name:</label>
+    <input type="text" id="senderName" name="senderName" required>
+    
+    <label for="itemName">Item:</label> 
+    <input type="text" id="itemName" name="itemName" required>
+     
+
+    <label for="storeSelect">Select Store:</label>
+    <select id="storeSelect" name="storeSelect" required>
+        <option value="">Please select a store</option>
+        <option value='Albany|09 414 2244|Albany Lifestyle Centre, Tenancy 10, 7 Corban Avenue'>Albany</option>
+        <option value='Albury|02 6021 0333|94 Borella Road East Albury, NSW'>Albury</option>
+        <option value='Alexandria|02 8303 8200|Shop C, 494-504 Gardeners Rd (Cnr O riordan St) Alexandria, NSW'>Alexandria</option>
+        <option value='Aspley|07 3263 3200|Shop 5-6 825 Zillmere Rd, Aspley, QLD'>Aspley</option>
+        <option value='Auburn|02 9648 5660|241 Parramatta Road Auburn, NSW'>Auburn</option>
+        <option value='Baby Bunting Cranbourne|03 5990 0700|Shop 28, Cranbourne Home, 1280 Thompsons Road'>Baby Bunting Cranbourne</option>
+        <option value='Baby Bunting Orange|02 6360 9600|21/5295 Mitchell Highway, Orange, NSW, 2800'>Baby Bunting Orange</option>
+        <option value='Baldivis|08 9591 8800|Shop 8, 600 Baldivis Road, Baldivis, WA'>Baldivis</option>
+        <option value='Ballarat|03 5338 1777|333 Gillies Street North, Wendouree Home Wendouree, VIC'>Ballarat</option>
+        <option value='Bankstown|02 9783 8222|Shop 15A, Bankstown Home, 9-49 Chapel Road Bankstown NSW'>Bankstown</option>
+        <option value='Belconnen|02 6252 1000|Shop 186, Level 3, Westfield Belconnen Shopping Centre Belconnen ACT'>Belconnen</option>
+        <option value='Belrose|02 9450 0277|Shop 101-102, Lower Ground 4-6 Niangala Close Belrose, NSW'>Belrose</option>
+        <option value='Bendigo|03 5447 3544|Shop 13a, Rocklea Homemaker Centre, 239-249 High Street Kangaroo Flat, VIC'>Bendigo</option>
+        <option value='Bentleigh|03 9575 4444|669 Warrigal Road Bentleigh, VIC'>Bentleigh</option>
+        <option value='Blacktown|02 8814 9044|Blacktown Mega Centre Corner Blacktown Road & St Martins Crescent Blacktown, NSW'>Blacktown</option>
+        <option value='Booval|07 3282 0900|Shop 5A, 214 Brisbane Road Booval, QLD'>Booval</option>
+        <option value='Browns Plains|07 3800 3022|Shop J1 Browns Plains Homemaker Centre 18 Commerce Drive Browns Plains QLD'>Browns Plains</option>
+        <option value='Burleigh Waters|07 5520 5633|Shop 15, Burleigh Homespace, 1 Santa Maria Court Burleigh Waters, QLD'>Burleigh Waters</option>
+        <option value='Burnside|03 8361 1444|T3, Cnr Ballarat Road & Chisholm Drive'>Burnside</option>
+        <option value='Cairns|07 4047 4600|37-47 Florence Street'>Cairns</option>
+        <option value='Campbelltown|02 4620 5222|Shop 5, 5 Blaxland Service Way Campbelltown, NSW'>Campbelltown</option>
+        <option value='Cannington|08 9258 4100|1419 Albany Hwy Cannington, WA'>Cannington</option>
+        <option value='Capalaba|07 3245 7900|Shop 1, 75 Redland Bay Road Capalaba, QLD'>Capalaba</option>
+        <option value='Castle Towers|02 8891 0700|Shop 378, Level 2 Castle Towers Shopping Centre 6-14 Castle Hill, Castle Hill, NSW'>Castle Towers</option>
+        <option value='Casula|02 8795 8800|Shop 21, Crossroads Homemaker Centre. Corner Beeches Road & Parkers Farm Place Casula. NSW'>Casula</option>
+        <option value='Chadstone|03 9563 4022|Shop M002, Chadstone Shopping Centre, 1341 Dandenong Road Chadstone, VIC'>Chadstone</option>
+        <option value='Chatswood|02 8422 7600|Shop 9, 372 Eastern Valley Hwy Chatswood, NSW'>Chatswood</option>
+        <option value='Chirnside Park|03 9294 4700|Tenancy 4, 266-268 Maroondah Hwy'>Chirnside Park</option>
+        <option value='Christchurch|03 353 2680|Tower Junction, 9/66 Clarence Street'>Christchurch</option>
+        <option value='Coffs Harbour|02 6690 1500|Shop M002, Shop 20, Park Beach Home Base 252 Pacific Highway Coffs Harbour NSW'>Coffs Harbour</option>
+        <option value='Doncaster|03 9840 2122|Shop MM101/2 Westfield Doncaster, 619 Doncaster Road Doncaster, VIC'>Doncaster</option>
+        <option value='Fortitude Valley|07 3853 9900|Shop 18A, 650 Wickham Street, Homemaker The Valley North Fortitude Valley, QLD'>Fortitude Valley</option>
+        <option value='Frankston|03 9769 6597|Shop 1, Power Centre, 85-115 Cranborne-Frankston Road Frankston, VIC'>Frankston</option>
+        <option value='Fyshwick|02 6280 7299|Shop 1, 30 Iron Knob Street, Fyshwick, ACT'>Fyshwick</option>
+        <option value='Geelong|03 5241 8530|Geelong Homemaker Centre, 235-237 Colac Road Waurn Ponds, VIC'>Geelong</option>
+        <option value='Gepps Cross|08 8162 9985|Shop 10, 750 Main North Road, Gepps Cross, SA'>Gepps Cross</option>
+        <option value='Glenorchy|03 6273 8341|Tenancy 1, 10 Derwent Park Road Derwent Park, TAS'>Glenorchy</option>
+        <option value='Hawthorn|03 8809 5200|693 Burwood Road Hawthorn East, VIC'>Hawthorn</option>
+        <option value='Hectorville|08 8154 8900|46 Glynburn Road'>Hectorville</option>
+        <option value='Helensvale|07 5580 0144|Shop 1, 1 Pacific Highway Helensvale, QLD'>Helensvale</option>
+        <option value='Hoppers Crossing|03 8360 7090|302-306 Old Geelong Road Hoppers Crossing, VIC'>Hoppers Crossing</option>
+        <option value='Hornsby|02 9472 2500|Shop MM3, Level 2 Westfield Hornsby Shopping Centre, 236 Pacific Highway'>Hornsby</option>
+        <option value='Joondalup|08 9300 0927|Shop 5, Masters Home Improvement Centre, 11 Injune Way Joondalup, WA'>Joondalup</option>
+        <option value='Knox|03 9259 1600|Shop M002, Level 2, Shop 2104A Westfield Shopping Centre 425 Burwood Highway Wantirna South VIC'>Knox</option>
+        <option value='Loganholme|07 3442 9000|Tenancy 6B/C, Hyperdome Home Centre, 3786-3810 Pacific Highway'>Loganholme</option>
+        <option value='Macgregor|07 3349 2655|Shop 1, 532 Kessels Road Macgregor, QLD'>Macgregor</option>
+        <option value='Manukau|09 414 2300|Manukau Supa Centre, 3/55 Lambie Drive'>Manukau</option>
+        <option value='Maribyrnong|03 9318 7444|6 / 98-108 Hampstead Road Maidstone, VIC'>Maribyrnong</option>
+        <option value='Melrose Park|08 8177 0905|Melrose Plaza, 1031-1037 South Road, Melrose Park, SA'>Melrose Park</option>
+        <option value='Midland|08 9250 5755|Shop 14, Midland Central, 4 Clayton Street Midland, WA'>Midland</option>
+        <option value='Mile End|08 8234 0633|Shop 10, 340 South Road, Richmond, SA'>Mile End</option>
+        <option value='Moore Park|02 9662 4263|Shop LG02 Cnr Todman Av & South Dowling Street Kensington, NSW'>Moore Park</option>
+        <option value='Munno Para|08 8254 6222|600 Main N Road Smithfield, SA'>Munno Para</option>
+        <option value='Myaree|08 9330 3111|Shop 3, 248 Leach Highway, Myaree, WA'>Myaree</option>
+        <option value='Narre Warren|03 9704 1444|430 Princes Hwy, Corner of Princes Hwy & Narre Warren North Road Narre Warren, VIC'>Narre Warren</option>
+        <option value='North Lakes|07 3491 8200|Shop 6, 111 North Lakes Drive North Lakes, QLD'>North Lakes</option>
+        <option value='Osborne Park|08 9278 0300|Shop 4, 505 Scarborough Road, Osborne Park, WA'>Osborne Park</option>
+        <option value='Penrith|02 4726 7600|Shop 350, At Home Penrith, 13 Patty Place Penrith, NSW'>Penrith</option>
+        <option value='Preston|03 9495 1386|Shop 5, 86 Bell Street Preston, VIC'>Preston</option>
+        <option value='Ringwood Eastland|03 8847 5900|MM20, Level 1, Eastland Shopping Centre, 171-175 Maroondah Hwy, Ringwood, VIC'>Ringwood Eastland</option>
+        <option value='Rutherford|02 4932 7144|343 New England Hwy Rutherford, NSW'>Rutherford</option>
+        <option value='Shellharbour|02 4295 1500|Shop 18, Shellharbour Park, 5 Range Road, Shellharbour City Centre NSW'>Shellharbour</option>
+        <option value='Shepparton|03 5829 7500|Shop 22, 8025 Goulburn Valley Hwy, Riverside Plaza Kialla, VIC'>Shepparton</option>
+        <option value='Sunshine Coast Kawana|07 5437 7600|Shop 6C, Home Central Sunshine Coast Kawana, QLD'>Sunshine Coast Kawana</option>
+        <option value='Sylvia Park|09 414 2310|Sylvia Park Lifestyle Centre, 393 Mt Wellington Highway'>Sylvia Park</option>
+        <option value='Taren Point|02 9525 4055|9/120 Taren Point Road Taren Point, NSW'>Taren Point</option>
+        <option value='Taylors Lakes|03 7378 7500|Shop 4, 460 Melton Highway Taylors Lakes, VIC'>Taylors Lakes</option>
+        <option value='Thomastown|03 9465 7770|1 / 36 Dalton Rd Thomastown, VIC'>Thomastown</option>
+        <option value='Toowoomba|07 4687 3200|Shop 2, Building A 910-932 Ruthven Rd Toowoomba, QLD'>Toowoomba</option>
+        <option value='Townsville|07 4430 8400|Shop 2C, 103 Duckworth Street Townsville, QLD'>Townsville</option>
+        <option value='Wagga Wagga|02 6933 9600|204-208 Baylis St, Wagga Wagga, NSW'>Wagga Wagga</option>
+        <option value='Warners Bay|02 4954 0322|Shop 1, 335 Hillsborough Road Warners Bay, NSW'>Warners Bay</option>
+        <option value='West Gosford|02 4322 1000|Shop 5, Riverside Park, 376 Manns Road West Gosford, NSW'>West Gosford</option>
+        <option value='Wetherill Park|02 8777 6100|Unit 48-51, Greenway Wetherill Park, 1183-1187 The Horsley Drive, Wetherill Park, NSW'>Wetherill Park</option>
+      
+    </select>
+    
+    <button type="submit">Print</button>
+</form>
+
+<div id="printArea" style="display:none;">
+  <p>Store Name: <span id="printStoreName"></span></p>
+  <p>Sender: <span id="printSenderName"></span></p>
+  <p>Item: <span id="printItemName"></span></p> 
+  <p>Address: <span id="printAddress"></span></p>
+  <p>Phone: <span id="printPhone"></span></p>
+</div>
+
+
 <table id="example" class="display" style="width:100%">
     <thead>
         <tr>
@@ -131,6 +276,8 @@
     </tbody>
 </table>
 
+
+
 <script>
 $(document).ready(function() {
     $('#example').DataTable({
@@ -155,7 +302,26 @@ $(document).ready(function() {
     });
 });
 
+document.getElementById('storeForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  var senderName = document.getElementById('senderName').value;
+  var itemName = document.getElementById('itemName').value; // Capture item name
+  var storeInfo = document.getElementById('storeSelect').value.split('|');
+  
+  document.getElementById('printStoreName').textContent = storeInfo[0];
+  document.getElementById('printSenderName').textContent = senderName;
+  document.getElementById('printItemName').textContent = itemName; // Set item name
+  document.getElementById('printAddress').textContent = storeInfo[2];
+  document.getElementById('printPhone').textContent = storeInfo[1];
+  
+  var printArea = document.getElementById('printArea');
+  printArea.style.display = 'block';
+  
+  window.print();
+  
+  printArea.style.display = 'none'; // Hide print area again after printing
+});
 </script>
-
 </body>
 </html>

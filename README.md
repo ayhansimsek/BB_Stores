@@ -1,4 +1,6 @@
-free to use
-every information is publicly available on babybunting website
-datagrab chrome extension to grab info from babybunting website
-excel formula for html table  =CONCATENATE("<tr>","<td>",A1,"</td>","<td>",B1,"</td>","<td>",C1,"</td>","<td>",D1,"</td>","<td>",E1,"</td>","</tr>")
+<h4> free to use</h4>
+<h4>every information is publicly available on babybunting website</h4>
+<h4>datagrab chrome extension to grab info from babybunting website</h4>
+<h4>example formula for tables  =CONCATENATE(" text ", A1)</h4>
+
+https://ayhansimsek.github.io/BB_Stores/

@@ -116,9 +116,38 @@ function printContent(storeName, storePhone, storeAddress) {
             <head>
                 <title>Print Preview</title>
                 <style>
-                    body { font-family: Arial, sans-serif; }
-                    .content { width: 100%; max-width: 800px; margin: auto; }
-                    .items, .from { margin-top: 20px; }
+                @media print {
+                    body {
+                        width: 10cm;
+                        height: 15cm;
+                        font-size: 8px; /* Reduce the base font size */
+                        padding: 1cm; /* Adjust padding to ensure content does not overflow */
+                    }
+                    .content {
+                        max-width: 9cm; /* Ensure content does not exceed the paper width */
+                    }
+                    h2, p, .form-group label, input, select, button {
+                        font-size: 8px; /* Adjust font sizes for readability */
+                    }
+                    .form-group {
+                        margin-bottom: 5px; /* Reduce spacing between form groups */
+                    }
+                    .input-group {
+                        flex-direction: column; /* Stack input group children vertically */
+                    }
+                    .input-group .form-control {
+                        margin-bottom: 2px; /* Reduce margin for stacked elements */
+                    }
+                    .btn {
+                        font-size: 7px; /* Smaller buttons */
+                        padding: 2px; /* Reduce button padding */
+                    }
+                    .hide-on-print {
+                        display: none; /* Hide elements not needed for print */
+                    }
+                    /* Further adjust spacing and layout as needed */
+                }
+                
                 </style>
             </head>
             <body>
@@ -137,8 +166,23 @@ function printContent(storeName, storePhone, storeAddress) {
                         <h3>From:</h3>
                         <p>Name: ${userName}</p>
                         <p>Baby Bunting IT</p>
-                        <p>157 Dandenong Road, VIC</p>
+                        <p>153 National Dr, Dandenong South VIC 3175</p>
                     </div>
+                </div>
+                <div class="returning">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <h2>Please attach this to</h2>  
+                    <h2>Returning equipment</h2>
+                    <p>&nbsp;</p>
+                    <p>From: ${storeName} Baby Bunting</p>
+                    <p>To: Baby Bunting IT</p>
                 </div>
             </body>
         </html>

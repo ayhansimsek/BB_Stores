@@ -147,7 +147,7 @@ function printContent(storeName, storePhone, storeAddress) {
                     }
                     /* Further adjust spacing and layout as needed */
                 }
-                
+                    .returning{page-break-before: always;}
                 </style>
             </head>
             <body>
@@ -170,13 +170,6 @@ function printContent(storeName, storePhone, storeAddress) {
                     </div>
                 </div>
                 <div class="returning">
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
                     <p>&nbsp;</p>
                     <h2>Please attach this to</h2>  
                     <h2>Returning equipment</h2>

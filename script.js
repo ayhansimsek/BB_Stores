@@ -118,16 +118,12 @@ function printContent(storeName, storePhone, storeAddress) {
                 <style>
                 @media print {
                     body {
-                        width: 10cm;
-                        height: 15cm;
-                        font-size: 8px; /* Reduce the base font size */
-                        padding: 1cm; /* Adjust padding to ensure content does not overflow */
+                        
+                        font-size: 12pt;
                     }
-                    .content {
-                        max-width: 9cm; /* Ensure content does not exceed the paper width */
-                    }
+                    
                     h2, p, .form-group label, input, select, button {
-                        font-size: 8px; /* Adjust font sizes for readability */
+                        font-size: 12pt; /* Adjust font sizes for readability */
                     }
                     .form-group {
                         margin-bottom: 5px; /* Reduce spacing between form groups */

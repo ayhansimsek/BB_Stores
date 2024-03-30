@@ -170,7 +170,6 @@ function printContent(storeName, storePhone, storeAddress) {
        
     </body>
   </html>
-      
     `);
     printWindow.document.close();
     printWindow.focus();
@@ -185,9 +184,9 @@ function printContent(storeName, storePhone, storeAddress) {
 // store status indicator
 
 function updateStoreStatus() {
-    // Define store opening and closing times
-    const openingTime = moment().hour(9).minute(0); // 9:00 AM
-    const closingTime = moment().hour(17).minute(30); // 5:30 PM
+    // Define store opening hours
+    const openingHour = 9;
+    const closingHour = 17;
     
 
     // Example time zones for stores, adjust as necessary
@@ -273,8 +272,7 @@ function updateStoreStatus() {
         const storeName = $(this).find('td:nth-child(2)').text().trim();
         const timeZone = timeZones[storeName];
         const currentTime = moment.tz(timeZone);
-
-        const isOpen = currentTime.isBetween(openingTime, closingTime, 'minutes', '[]'); // '[]' includes both start and end time
+        const isOpen = currentTime.hour() >= openingHour && currentTime.hour() < closingHour;
 
         $(this).find('.store-status').addClass(isOpen ? 'open' : 'closed').text(isOpen ? '🟢' : '🔴');
     });

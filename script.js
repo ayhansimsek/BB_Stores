@@ -112,69 +112,65 @@ function printContent(storeName, storePhone, storeAddress) {
 
     let printWindow = window.open('', '_blank');
     printWindow.document.write(`
-        <html>
-            <head>
-                <title>Print Preview</title>
-                <style>
-                @media print {
-                    body {
-                        
-                        font-size: 12pt;
-                    }
-                    
-                    h2, p, .form-group label, input, select, button {
-                        font-size: 12pt; /* Adjust font sizes for readability */
-                    }
-                    .form-group {
-                        margin-bottom: 5px; /* Reduce spacing between form groups */
-                    }
-                    .input-group {
-                        flex-direction: column; /* Stack input group children vertically */
-                    }
-                    .input-group .form-control {
-                        margin-bottom: 2px; /* Reduce margin for stacked elements */
-                    }
-                    .btn {
-                        font-size: 7px; /* Smaller buttons */
-                        padding: 2px; /* Reduce button padding */
-                    }
-                    .hide-on-print {
-                        display: none; /* Hide elements not needed for print */
-                    }
-                    /* Further adjust spacing and layout as needed */
-                }
-                    .returning{page-break-before: always;}
-                </style>
-            </head>
-            <body>
-                <div class="content">
-                    <h2>To:</h2>
-                    <p>Store Name: ${storeName}</p>
-                    <p>ATTN: ${attn}</p>
-                    <p>Store Address: ${storeAddress}</p>
-                    <p>Store Phone: ${storePhone}</p>
-                    ${ticketNumberHtml}
-                    <div class="items">
-                        <h3>Items:</h3>
-                        ${itemsHtml}
-                    </div>
-                    <div class="from">
-                        <h3>From:</h3>
-                        <p>Name: ${userName}</p>
-                        <p>Baby Bunting IT</p>
-                        <p>153 National Dr, Dandenong South VIC 3175</p>
-                    </div>
-                </div>
-                <div class="returning">
-                    <p>&nbsp;</p>
-                    <h2>Please attach this to</h2>  
-                    <h2>Returning equipment</h2>
-                    <p>&nbsp;</p>
-                    <p>From: ${storeName} Baby Bunting</p>
-                    <p>To: Baby Bunting IT</p>
-                </div>
-            </body>
-        </html>
+    <html>
+    <head>
+    <style>
+    @page section1
+      {size:595.3pt 841.9pt;
+      margin:36.0pt 36.0pt 36.0pt 36.0pt;
+      }
+    div.section1
+      {page:section1;}
+  
+    .section2{
+      page-break-before: always;
+    }
+    .section2 h2{
+      font-size:24pt;
+    }
+    .section2 p{
+      font-size: 15pt;
+    } 
+  
+    body{
+      display: flex;
+      margin-left: 12%;
+    }
+    </style>
+    </head>
+  
+  
+    <body  style='word-wrap:break-word'>
+  
+      <div class="section1">
+        <h2>To:</h2>
+        <p>Store Name: ${storeName}</p>
+        <p>ATTN: ${attn}</p>
+        <p>Store Address: ${storeAddress}</p>
+        <p>Store Phone: ${storePhone}</p>
+        ${ticketNumberHtml}
+        
+        
+      <div class="section1">
+          <h3>From:</h3>
+          <p>Name: ${userName}</p>
+          <p>Baby Bunting IT</p>
+          <p>153 National Dr, Dandenong South VIC 3175</p>
+          <h3>Items:</h3>
+          ${itemsHtml}
+
+          <div class="section1 section2">
+            <h2>Please attach this to</h2>  
+            <h2>Returning equipment</h2>
+            <span>&nbsp;</span>
+            <h2>From:</h2>
+            <p>${storeName} </p>
+            <h2>To:</h2>
+            <p>${userName} (IT Department)</p>
+       
+    </body>
+  </html>
+      
     `);
     printWindow.document.close();
     printWindow.focus();

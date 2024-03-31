@@ -184,9 +184,9 @@ function printContent(storeName, storePhone, storeAddress) {
 // store status indicator
 
 function updateStoreStatus() {
-    // Define store opening hours
     const openingHour = 9;
     const closingHour = 17;
+    const closingMinutes = 30;
     
 
     // Example time zones for stores, adjust as necessary
@@ -260,10 +260,10 @@ function updateStoreStatus() {
 'Loganholme': 'Australia/Brisbane',
 'Orange': 'Australia/Sydney',
 'Cranbourne': 'Australia/Melbourne',
-'Albany': 'New Zealand/Auckland',
-'Christchurch': 'New Zealand/Christchurch',
-'Sylvia Park': 'New Zealand/Auckland',
-'Manukau': 'New Zealand/Auckland',
+'Albany': 'Pacific/Auckland',
+'Christchurch': 'Pacific/Auckland',
+'Sylvia Park': 'Pacific/Auckland',
+'Manukau': 'Pacific/Auckland',
 
 
     };
@@ -272,9 +272,10 @@ function updateStoreStatus() {
         const storeName = $(this).find('td:nth-child(2)').text().trim();
         const timeZone = timeZones[storeName];
         const currentTime = moment.tz(timeZone);
-        const isOpen = currentTime.hour() >= openingHour && currentTime.hour() < closingHour;
+        const isOpen = (currentTime.hour() > openingHour || (currentTime.hour() === openingHour && currentTime.minutes() >= 0)) && 
+                       (currentTime.hour() < closingHour || (currentTime.hour() === closingHour && currentTime.minutes() < closingMinutes));
 
-        $(this).find('.store-status').addClass(isOpen ? 'open' : 'closed').text(isOpen ? '🟢' : '🔴');
+        $(this).find('.store-status').removeClass('open closed').addClass(isOpen ? 'open' : 'closed').text(isOpen ? '🟢' : '🔴');
     });
 }
 

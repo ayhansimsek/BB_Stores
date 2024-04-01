@@ -282,6 +282,6 @@ function updateStoreStatus() {
 // Call the function on document ready and optionally at regular intervals
 $(document).ready(function() {
     updateStoreStatus();
-    // Update status every 5 minutes to keep it current
-    setInterval(updateStoreStatus, 300000);
+    // Update status every minute to keep it current
+    setInterval(updateStoreStatus, 60000);
 });

@@ -253,6 +253,7 @@ function updateStoreStatus() {
 'Alexandria': 'Australia/Sydney',
 'Wagga Wagga': 'Australia/Sydney',
 'Cairns': 'Australia/Brisbane',
+'Shepparton': 'Australia/Melbourne',        
 'Burnside': 'Australia/Melbourne',
 'Hornsby': 'Australia/Sydney',
 'Hectorville': 'Australia/Adelaide',

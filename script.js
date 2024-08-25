@@ -261,6 +261,7 @@ function updateStoreStatus() {
 'Loganholme': 'Australia/Brisbane',
 'Orange': 'Australia/Sydney',
 'Cranbourne': 'Australia/Melbourne',
+'Maroochydore': 'Australia/Brisbane',
 'Albany': 'Pacific/Auckland',
 'Christchurch': 'Pacific/Auckland',
 'Sylvia Park': 'Pacific/Auckland',
